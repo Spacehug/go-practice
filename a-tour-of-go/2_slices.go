@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math"
-	"golang.org/x/tour/pic"
+  "math"
+  "golang.org/x/tour/pic"
 )
 
 func Pic(pattern func(x, y int) uint8) func(dx int, dy int) [][]uint8 {
