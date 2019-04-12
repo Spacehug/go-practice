@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// In the separate file frequency.go, you are given a function, Frequency(),
+// In the separate file parallel_letter_frequency.go, you are given a function, Frequency(),
 // to sequentially count letter frequencies in a single text.
 //
 // Perform this exercise on parallelism using Go concurrency features.
