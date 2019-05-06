@@ -6,7 +6,7 @@ import (
 )
 
 func Encode(input string) string {
-	var norm []rune
+	var norm = make([]rune, len(input))
 	for _, r := range input {
 		if unicode.IsDigit(r) || unicode.IsLetter(r) {
 			norm = append(norm, unicode.ToLower(r))
