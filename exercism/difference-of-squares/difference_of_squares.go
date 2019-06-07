@@ -2,7 +2,7 @@ package diffsquares
 
 func SquareOfSum(n int) int {
 	s := (n * (n + 1)) >> 1
-	return  s * s
+	return s * s
 }
 
 func SumOfSquares(n int) int {
@@ -10,5 +10,5 @@ func SumOfSquares(n int) int {
 }
 
 func Difference(n int) int {
-	return (n * (3 * n + 2) * (n - 1) * (n + 1)) / 3 >> 2
+	return (n * (3*n + 2) * (n - 1) * (n + 1)) / 3 >> 2
 }

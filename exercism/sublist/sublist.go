@@ -28,8 +28,8 @@ func eq(s1, s2 []int) bool {
 }
 
 func isSub(s1, s2 []int) bool {
-	for i := 0; i <= len(s2) - len(s1); i++ {
-		if eq(s1, s2[i:i + len(s1)]) {
+	for i := 0; i <= len(s2)-len(s1); i++ {
+		if eq(s1, s2[i:i+len(s1)]) {
 			return true
 		}
 	}

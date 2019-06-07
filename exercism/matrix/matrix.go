@@ -12,16 +12,24 @@ func (m *Matrix) Rows() [][]int {
 	n := make([][]int, len(*m))
 	for idx1, row := range *m {
 		n[idx1] = make([]int, len(row))
-		for idx2, val := range row {n[idx1][idx2] = val}
+		for idx2, val := range row {
+			n[idx1][idx2] = val
+		}
 	}
 	return n
 }
 
 func (m *Matrix) Cols() [][]int {
 	var colNum int
-	if len(*m) > 0 {colNum = len((*m)[0])}
+	if len(*m) > 0 {
+		colNum = len((*m)[0])
+	}
 	n := make([][]int, colNum)
-	for _, row := range *m {for idx, col := range row {n[idx] = append(n[idx], col)}}
+	for _, row := range *m {
+		for idx, col := range row {
+			n[idx] = append(n[idx], col)
+		}
+	}
 	return n
 }
 
@@ -30,7 +38,7 @@ func (m *Matrix) Set(r, c, val int) bool {
 		return false
 	}
 	(*m)[r][c] = val
-	return true  // I.e. ok
+	return true // I.e. ok
 }
 
 func New(s string) (*Matrix, error) {

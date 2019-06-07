@@ -13,5 +13,5 @@ func Square(n int) (uint64, error) {
 		return 0, errors.New("integer out of bounds")
 
 	}
-	return 1 << uint64(n - 1), nil
+	return 1 << uint64(n-1), nil
 }

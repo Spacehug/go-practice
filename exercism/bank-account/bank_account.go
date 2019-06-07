@@ -4,7 +4,7 @@ import "sync"
 
 type Account struct {
 	sync.RWMutex
-	open   bool
+	open    bool
 	balance int64
 }
 

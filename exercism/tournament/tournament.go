@@ -34,19 +34,25 @@ func (t *Team) draw() {
 }
 
 func (t *Team) points() int {
-	return 3 * t.won + 1 * t.drawn
+	return 3*t.won + 1*t.drawn
 }
 
 func (t teams) getOrCreateTeam(n string) *Team {
-	if t[n] == nil {t[n] = &Team{name: n}}
+	if t[n] == nil {
+		t[n] = &Team{name: n}
+	}
 	return t[n]
 }
 
 func (t teams) sort() []*Team {
 	var all []*Team
-	for _, team := range t {all = append(all, team)}
+	for _, team := range t {
+		all = append(all, team)
+	}
 	sort.Slice(all, func(i, j int) bool {
-		if all[i].points() == all[j].points() {return all[i].name < all[j].name}
+		if all[i].points() == all[j].points() {
+			return all[i].name < all[j].name
+		}
 		return all[i].points() > all[j].points()
 	})
 	return all
@@ -56,7 +62,9 @@ func (t teams) fromResults(r io.Reader) error {
 	s := bufio.NewScanner(r)
 	for s.Scan() {
 		l := s.Text()
-		if l == "" || l[0] == '#' {continue}
+		if l == "" || l[0] == '#' {
+			continue
+		}
 		chunks := strings.Split(l, ";")
 		if len(chunks) != 3 {
 			return fmt.Errorf("wrong field count for line: %s (got %d fields)", l, len(chunks))

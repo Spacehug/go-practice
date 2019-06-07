@@ -9,7 +9,7 @@ func Valid(s string) bool {
 			continue
 		case c >= '0' && c <= '9':
 			m = int(c - '0')
-			if d % 2 == 1 {
+			if d%2 == 1 {
 				m <<= 1
 			}
 			if m > 9 {
@@ -21,5 +21,5 @@ func Valid(s string) bool {
 			return false
 		}
 	}
-	return d > 1 && n % 10 == 0
+	return d > 1 && n%10 == 0
 }

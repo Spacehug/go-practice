@@ -32,14 +32,14 @@ func newCounter() counter {
 
 func NewWriteCounter(w io.Writer) WriteCounter {
 	return &writeCounter{
-		writer:       w,
+		writer:  w,
 		counter: newCounter(),
 	}
 }
 
 func NewReadCounter(r io.Reader) ReadCounter {
 	return &readCounter{
-		reader:       r,
+		reader:  r,
 		counter: newCounter(),
 	}
 }

@@ -1,8 +1,10 @@
 package series
 
 func All(n int, s string) []string {
-	var res = make([]string, len(s) - n + 1)
-	for i := 0; i <= len(s) - n; i++ {res[i] = s[i:i + n]}
+	var res = make([]string, len(s)-n+1)
+	for i := 0; i <= len(s)-n; i++ {
+		res[i] = s[i : i+n]
+	}
 	return res
 }
 

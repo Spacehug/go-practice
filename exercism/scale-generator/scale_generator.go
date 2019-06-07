@@ -26,7 +26,7 @@ func Scale(tonic string, interval string) (scale []string) {
 	position := 0
 	for _, offset := range strings.Split(interval, "") {
 		if shift, ok := offsets[offset]; ok {
-			partialScale = append(partialScale, scale[position % len(scale)])
+			partialScale = append(partialScale, scale[position%len(scale)])
 			position += shift
 		}
 	}

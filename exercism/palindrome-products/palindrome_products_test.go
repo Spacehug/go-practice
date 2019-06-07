@@ -64,7 +64,6 @@ var testData = []struct {
 	//	""},
 }
 
-
 func TestPalindromeProducts(t *testing.T) {
 	// Uncomment the following line and the bonusData var above to add the bonus test to the default tests
 	// testData = append(testData, bonusData...)
